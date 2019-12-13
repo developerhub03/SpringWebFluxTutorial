@@ -7,6 +7,9 @@ import org.springframework.data.annotation.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 /**
  * Created by rama4 on 12/5/2019.
  */
@@ -15,6 +18,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Employee {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String name;
     private String department;
